@@ -11,3 +11,9 @@ export APP_ID=896660
 export INSTALL_DIR=/opt/valheim_server
 steamcmd +force_install_dir $INSTALL_DIR +login anonymous +app_update $APP_ID validate +quit
 ```
+
+Assuming this is installed a basic run command would look like the below (based on Linux, adjust for Windows):
+
+```zsh
+$INSTALL_DIR/valheim_server.x86_64 -name "My super Viking meadfest" -world "Midgard" -port 2456 -password "megas3cret!"
+```

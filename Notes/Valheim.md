@@ -21,3 +21,12 @@ $INSTALL_DIR/valheim_server.x86_64 -name "My super Viking meadfest" -world "Midg
 # Windows
 $INSTALL_DIR/valheim_server.exe -name "My super Viking meadfest" -world "Midgard" -port 2456 -password "megas3cret!"
 ```
+
+These additional flags are worth considering:
+
+```zsh
+-crossplay
+-public 0
+-nographics
+-batchmode
+```

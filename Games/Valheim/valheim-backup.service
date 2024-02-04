@@ -1,0 +1,17 @@
+# file: /etc/systemd/system/valheim-backup.service
+# A systemd service for backing up a single Valheim server world
+[Unit]
+Description=Valheim backup service
+Wants=valheim-backup.timer
+After=syslog.target network.target nss-lookup.target network-online.target
+
+[Service]
+Type=oneshot
+User=steam
+Group=steam
+ExecStart=/data/steam/valheim_server/backup_world.sh
+KillSignal=SIGINT
+LimitNOFILE=100000
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+# file: /etc/systemd/system/valheim-backup.timer
+# A simple timer to backup valheim worlds every 30mins
+[Unit]
+Description=A simple timer to backup valheim worlds every 30mins
+Requires=valheim-backup.service
+
+[Timer]
+# The game saves every 30mins and give it 10mins to load up
+OnBootSec=10min
+OnUnitActiveSec=30min
+
+[Install]
+WantedBy=timers.target
